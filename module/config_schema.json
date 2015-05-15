@@ -1,0 +1,28 @@
+{
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "media_playback": {
+            "required": false,
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "inline_video": {
+                    "required": true,
+                    "type": "boolean",
+                    "description": "set this to 'true' to force iOS webview to play video inline rather than launch a widget.  video element in the HTML document must also include the webkit-playsinline attribute."
+                },
+                "autoplay_video": {
+                    "required": true,
+                    "type": "boolean",
+                    "description": "set this to true to require user interaction before playing media"
+                }
+            }
+        },
+        "accept_cookies": {
+            "required": true,
+            "type": "boolean",
+            "description": "set this to 'true' to set the application's webview policy to accept cookies"            
+        }
+    }
+}

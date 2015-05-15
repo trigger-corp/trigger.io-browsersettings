@@ -1,0 +1,8 @@
+{
+	"description": "Set some useful browser configuration options.",
+	"min_platform_version": "v2.2.11",
+	"namespace": "browsersettings",
+	"platform_version": "v2.2.11",
+	"version": "1.0",
+	"changes": "* Initial release"
+}

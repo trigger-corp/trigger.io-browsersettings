@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>IDESourceControlProjectFavoriteDictionaryKey</key>
+	<false/>
+	<key>IDESourceControlProjectIdentifier</key>
+	<string>4DB74268-2922-4D89-AC12-F8C282538735</string>
+	<key>IDESourceControlProjectName</key>
+	<string>ForgeModule</string>
+	<key>IDESourceControlProjectOriginsDictionary</key>
+	<dict>
+		<key>DE0138D3DFC9A3D55A90D3B38A47BB3F013B3445</key>
+		<string>https://github.com/rosstapson/browsersettings.git</string>
+	</dict>
+	<key>IDESourceControlProjectPath</key>
+	<string>inspector/ios-inspector/ForgeModule/ForgeModule.xcodeproj</string>
+	<key>IDESourceControlProjectRelativeInstallPathDictionary</key>
+	<dict>
+		<key>DE0138D3DFC9A3D55A90D3B38A47BB3F013B3445</key>
+		<string>../../../../..</string>
+	</dict>
+	<key>IDESourceControlProjectURL</key>
+	<string>https://github.com/rosstapson/browsersettings.git</string>
+	<key>IDESourceControlProjectVersion</key>
+	<integer>111</integer>
+	<key>IDESourceControlProjectWCCIdentifier</key>
+	<string>DE0138D3DFC9A3D55A90D3B38A47BB3F013B3445</string>
+	<key>IDESourceControlProjectWCConfigurations</key>
+	<array>
+		<dict>
+			<key>IDESourceControlRepositoryExtensionIdentifierKey</key>
+			<string>public.vcs.git</string>
+			<key>IDESourceControlWCCIdentifierKey</key>
+			<string>DE0138D3DFC9A3D55A90D3B38A47BB3F013B3445</string>
+			<key>IDESourceControlWCCName</key>
+			<string>browsersettings</string>
+		</dict>
+	</array>
+</dict>
+</plist>

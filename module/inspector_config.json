@@ -1,0 +1,12 @@
+{
+	"this_module": {
+		"config": {
+			"media_playback": {
+				"inline_video": true,
+				"autoplay_video": true
+			},
+			"accept_cookies": true
+		}
+	},
+	"modules": {}
+}
