@@ -1,8 +1,8 @@
 {
 	"description": "Set some useful browser configuration options.",
-	"min_platform_version": "v2.4.2",
+	"min_platform_version": "v2.4.4",
 	"namespace": "browsersettings",
-	"platform_version": "v2.4.2",
-	"version": "1.2",
-	"changes": "* Support Crosswalk 17.46.448.10"
+	"platform_version": "v2.4.4",
+	"version": "1.3",
+	"changes": "* Fixed: Setting `auto_play_video` to `true` could cause a crash on startup with Android 4.1 devices."
 }
