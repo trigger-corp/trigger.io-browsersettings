@@ -18,7 +18,10 @@ public class Util {
 		}
 	}
 
-	public static void setAcceptCookies(boolean acceptCookies){		
+	public static void setAcceptCookies(boolean acceptCookies){
+		if (Build.VERSION.SDK_INT >= 12 /* Build.VERSION_CODES.HONEYCOMB */) {
+			CookieManager.setAcceptFileSchemeCookies(true);
+		}
 		CookieManager cookieManager = CookieManager.getInstance();
 		cookieManager.setAcceptCookie(acceptCookies);
 		if (Build.VERSION.SDK_INT >= 21 /* Build.VERSION_CODES.LOLLIPOP */) {
