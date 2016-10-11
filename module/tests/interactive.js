@@ -1,8 +1,30 @@
+/* global module, $, forge, asyncTest, askQuestion, ok, start */
+
 module("browsersettings");
 
+asyncTest("Test html5 audio", 1, function() {
+	var audioElement = document.createElement("audio");
+	audioElement.src = forge.inspector.getFixture("browsersettings", "audio.mp3").uri;
+	audioElement.controls = true;
+	document.getElementById("qunit").appendChild(audioElement);
+	askQuestion("Could you hear audio when you hit play?", {
+		Yes: function() {
+			$("audio").remove();
+			ok(true, "success");
+			start();
+		},
+		No: function() {
+			$("audio").remove();
+			ok(false, "failure");
+			start();
+		}
+	});
+});
+
+
 if (forge.is.ios()) {
-    asyncTest("Play media inline", 1, function() {              
-		$("video" ).remove();	        
+	asyncTest("Play media inline", 1, function() {
+		$("video" ).remove();
 		var videoElement = document.createElement("video");
 		videoElement.setAttribute("controls", "controls");
 		videoElement.setAttribute("webkit-playsinline", true);
@@ -19,11 +41,12 @@ if (forge.is.ios()) {
 				start();
 			}
 		});
-        
+
 	});
 }
+
 asyncTest("Autoplay video", 1, function() {
-	$("video" ).remove();	
+	$("video" ).remove();
 	var videoElement = document.createElement("video");
 	videoElement.setAttribute("webkit-playsinline", true);
 	videoElement.setAttribute("autoplay", "autoplay");
@@ -46,7 +69,7 @@ asyncTest("Test accept cookies", 1, function() {
 	$("video" ).remove();
 	var iframeElement = document.createElement("iframe");
 	iframeElement.setAttribute("id", "iframe");
-	document.getElementById("qunit").appendChild(iframeElement); 
+	document.getElementById("qunit").appendChild(iframeElement);
 	$.ajax({
 		url: "http://httpbin.org/cookies/set?mainpage_cookie=set_successfully",
 		success: function () {
@@ -61,7 +84,7 @@ asyncTest("Test accept cookies", 1, function() {
 		Yes: function() {
 			ok(true, "success");
 			start();
-		}, 
+		},
 		No: function() {
 			ok(false, "failure");
 			start();
