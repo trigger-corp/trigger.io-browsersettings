@@ -1,14 +1,22 @@
 {
-	"this_module": {
-		"config": {
-			"media_playback": {
-				"inline_video": true,
-				"autoplay_video": true,
-				"enable_background_audio": true,
-				"enable_html5_audio": true
-			},
-			"accept_cookies": true
-		}
-	},
-	"modules": {}
+    "this_module": {
+        "config": {
+            "media_playback": {
+                "inline_video": true,
+                "autoplay_video": true,
+                "enable_background_audio": true,
+                "enable_html5_audio": true
+            },
+            "accept_cookies": true
+        }
+    },
+    "modules": {},
+    "core": {
+        "general": {
+            "trusted_urls": [
+                "http://httpbin.org/*",
+                "https://httpbin.org/*"
+            ]
+        }
+    }
 }
