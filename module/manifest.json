@@ -4,5 +4,5 @@
     "namespace": "browsersettings",
     "platform_version": "v2.6.3",
     "version": "1.6",
-    "changes": "* New iOS configuration option: `respect_playing_audio`.\n*Added support for iOS WKWebView."
+    "changes": "* New iOS configuration option: `respect_playing_audio`.\n* Added support for iOS WKWebView."
 }
