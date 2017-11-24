@@ -17,3 +17,6 @@ enable html5 audio
 
 enable background audio
 :   set this to `true` to allow audio in the iOS webview to play even when the app is running in the background. (iOS only)
+
+respect playing audio
+:   set this to `true` to prevent audio being played by other apps from being muted when your app starts. (iOS only)

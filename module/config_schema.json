@@ -1,40 +1,46 @@
 {
-	"type": "object",
-	"additionalProperties": false,
-	"properties": {
-		"media_playback": {
-			"required": false,
-			"type": "object",
-			"additionalProperties": false,
-			"properties": {
-				"inline_video": {
-					"required": false,
-					"type": "boolean",
-					"description": "set this to 'true' to force iOS webview to play video inline rather than launch a widget.  video element in the HTML document must also include the webkit-playsinline attribute."
-				},
-				"autoplay_video": {
-					"required": false,
-					"type": "boolean",
-					"description": "set this to true to require user interaction before playing media"
-				},
-				"enable_html5_audio": {
-					"title": "Enable HTML5 Audio",
-					"required": false,
-					"type": "boolean",
-					"description": "set this to 'true' to enable HTML5 <audio> tag playback in the iOS webview."
-				},
-				"enable_background_audio": {
-					"title": "Enable Background Audio",
-					"required": false,
-					"type": "boolean",
-					"description": "set this to true to allow audio in the iOS webview to play even when the app is running in the background."
-				}
-			}
-		},
-		"accept_cookies": {
-			"required": false,
-			"type": "boolean",
-			"description": "set this to 'true' to set the application's webview policy to accept cookies"
-		}
-	}
+    "type": "object",
+    "additionalProperties": false,
+    "properties": {
+        "media_playback": {
+            "required": false,
+            "type": "object",
+            "additionalProperties": false,
+            "properties": {
+                "inline_video": {
+                    "required": false,
+                    "type": "boolean",
+                    "description": "set this to 'true' to force iOS webview to play video inline rather than launch a widget.  video element in the HTML document must also include the webkit-playsinline attribute. (iOS only)"
+                },
+                "autoplay_video": {
+                    "required": false,
+                    "type": "boolean",
+                    "description": "set this to true to require user interaction before playing media"
+                },
+                "enable_html5_audio": {
+                    "title": "Enable HTML5 Audio",
+                    "required": false,
+                    "type": "boolean",
+                    "description": "set this to 'true' to enable HTML5 <audio> tag playback in the iOS webview. (iOS only)"
+                },
+                "enable_background_audio": {
+                    "title": "Enable Background Audio",
+                    "required": false,
+                    "type": "boolean",
+                    "description": "set this to 'true' to allow audio in the iOS webview to play even when the app is running in the background. (iOS only)"
+                },
+                "respect_playing_audio": {
+                    "title": "Respect Playing Audio",
+                    "required": false,
+                    "type": "boolean",
+                    "description": "set this to 'true' to prevent audio being played by other apps from being muted when your app starts. (iOS only)"
+                }
+            }
+        },
+        "accept_cookies": {
+            "required": false,
+            "type": "boolean",
+            "description": "set this to 'true' to set the application's webview policy to accept cookies"
+        }
+    }
 }

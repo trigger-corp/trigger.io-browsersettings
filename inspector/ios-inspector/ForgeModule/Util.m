@@ -11,34 +11,32 @@
 
 @implementation Util
 
-+ (void) setInlineVideo:(BOOL)inlineVideo {
++ (void) setAllowsInlineMediaPlayback:(BOOL)allowsInlineMediaPlayback {
     if (NSClassFromString(@"WKWebView") && [[ForgeApp sharedApp] useWKWebView]) {        
-        // TODO handle iOS 8
-        [ForgeLog w:@"forge won't support WKWebView until various issues are addressed."];
+        WKWebView *webView = (WKWebView*)[[ForgeApp sharedApp] webView];
+        webView.configuration.allowsInlineMediaPlayback = allowsInlineMediaPlayback;
     } else {
         UIWebView *webView = (UIWebView*)[[ForgeApp sharedApp] webView];
-        webView.allowsInlineMediaPlayback = inlineVideo;
+        webView.allowsInlineMediaPlayback = allowsInlineMediaPlayback;
     }
-
-    return;
 }
 
-+ (void) setAutoplayVideo:(BOOL)autoplayVideo {
+
++ (void) setMediaPlaybackRequiresUserAction:(BOOL)mediaPlaybackRequiresUserAction {
     if (NSClassFromString(@"WKWebView") && [[ForgeApp sharedApp] useWKWebView]) {        
-        // TODO handle iOS 8
-        [ForgeLog w:@"forge won't support WKWebView until various issues are addressed."];
+        WKWebView *webView = (WKWebView*)[[ForgeApp sharedApp] webView];
+        webView.configuration.mediaPlaybackRequiresUserAction = mediaPlaybackRequiresUserAction;
     } else {
         UIWebView *webView = (UIWebView*)[[ForgeApp sharedApp] webView];
-        webView.mediaPlaybackRequiresUserAction = !autoplayVideo;
+        webView.mediaPlaybackRequiresUserAction = mediaPlaybackRequiresUserAction;
     }
-    return;
 }
 
-+ (void) setAcceptCookies:(BOOL)acceptCookies {
+
++ (void) setCookieAcceptPolicy:(BOOL)acceptCookies {
     if (acceptCookies) {
         [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyAlways];
-    }
-    else {
+    } else {
         [[NSHTTPCookieStorage sharedHTTPCookieStorage] setCookieAcceptPolicy:NSHTTPCookieAcceptPolicyNever];
     }
 }

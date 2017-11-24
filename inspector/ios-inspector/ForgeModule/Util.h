@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 @interface Util : NSObject
-+ (void) setInlineVideo:(BOOL)inlineVideo;
-+ (void) setAutoplayVideo:(BOOL)autoplayVideo;
-+ (void) setAcceptCookies:(BOOL)acceptCookies;
++ (void) setAllowsInlineMediaPlayback:(BOOL)allowsInlineMediaPlayback;
++ (void) setMediaPlaybackRequiresUserAction:(BOOL)mediaPlaybackRequiresUserAction;
++ (void) setCookieAcceptPolicy:(BOOL)acceptCookies;
 @end
