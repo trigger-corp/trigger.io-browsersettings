@@ -27,7 +27,7 @@ if (forge.is.ios()) {
         $("video" ).remove();
         var videoElement = document.createElement("video");
         videoElement.setAttribute("controls", "controls");
-        videoElement.setAttribute("webkit-playsinline", true);
+        videoElement.setAttribute("playsinline", true);
         videoElement.setAttribute("width", "100%");
         videoElement.src = forge.inspector.getFixture("browsersettings", "small.mp4").uri;
         document.getElementById("qunit").appendChild(videoElement);
@@ -48,7 +48,7 @@ if (forge.is.ios()) {
 asyncTest("Autoplay video", 1, function() {
     $("video" ).remove();
     var videoElement = document.createElement("video");
-    videoElement.setAttribute("webkit-playsinline", true);
+    videoElement.setAttribute("playsinline", true);
     videoElement.setAttribute("autoplay", "autoplay");
     videoElement.setAttribute("width", "100%");
     videoElement.src = forge.inspector.getFixture("browsersettings", "small.mp4").uri;

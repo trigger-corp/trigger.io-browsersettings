@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		9195B81D1AF775A500E3CD0B /* Util.m in Sources */ = {isa = PBXBuildFile; fileRef = 9195B81C1AF775A500E3CD0B /* Util.m */; };
 		B31B6D5215C13D5200854074 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31B6D5115C13D5200854074 /* Foundation.framework */; };
 		B31B6D6F15C1467100854074 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B31B6D6E15C1467100854074 /* CoreFoundation.framework */; };
 		B37C3A5D162717A200B50A60 /* ForgeCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B37C3A5C162717A200B50A60 /* ForgeCore.framework */; };
@@ -22,8 +21,6 @@
 /* Begin PBXFileReference section */
 		71737D891FC853CC008F288E /* placeholder.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = placeholder.plist; sourceTree = "<group>"; };
 		916B729A1AFCEEB20083BE36 /* ForgeCore.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; name = ForgeCore.bundle; path = ../ForgeCore.bundle; sourceTree = "<group>"; };
-		9195B81B1AF775A500E3CD0B /* Util.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Util.h; sourceTree = "<group>"; };
-		9195B81C1AF775A500E3CD0B /* Util.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = Util.m; sourceTree = "<group>"; };
 		B31B6D4E15C13D5200854074 /* libForgeModule.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libForgeModule.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		B31B6D5115C13D5200854074 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		B31B6D6D15C1467100854074 /* browsersettings.bundle */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = browsersettings.bundle; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -68,8 +65,6 @@
 			isa = PBXGroup;
 			children = (
 				71737D891FC853CC008F288E /* placeholder.plist */,
-				9195B81B1AF775A500E3CD0B /* Util.h */,
-				9195B81C1AF775A500E3CD0B /* Util.m */,
 				B3CC61EF1716ECB500A1A8EF /* browsersettings_API.h */,
 				B3CC61F01716ECB500A1A8EF /* browsersettings_API.m */,
 				B3CC61F11716ECB500A1A8EF /* browsersettings_EventListener.h */,
@@ -153,6 +148,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = B31B6D4315C13D5200854074;
@@ -183,7 +179,6 @@
 			files = (
 				B3CC61F21716ECB500A1A8EF /* browsersettings_API.m in Sources */,
 				B3CC61F41716ECBB00A1A8EF /* browsersettings_EventListener.m in Sources */,
-				9195B81D1AF775A500E3CD0B /* Util.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
