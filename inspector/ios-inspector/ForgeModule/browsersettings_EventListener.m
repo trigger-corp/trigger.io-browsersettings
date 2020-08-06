@@ -36,9 +36,11 @@
     NSDictionary *config_media_playback = [[[ForgeApp sharedApp] configForModule:@"browsersettings"] objectForKey:@"media_playback"];
 
     configuration.allowsInlineMediaPlayback = [[config_media_playback objectForKey:@"inline_video"] boolValue];
-    configuration.mediaPlaybackRequiresUserAction = [[config_media_playback objectForKey:@"autoplay_video"] boolValue];
-    if (configuration.mediaPlaybackRequiresUserAction == NO) {
+    Boolean autoplay_video = [[config_media_playback objectForKey:@"autoplay_video"] boolValue];
+    if (autoplay_video == NO) {
         configuration.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypeNone;
+    } else {
+        configuration.mediaTypesRequiringUserActionForPlayback = WKAudiovisualMediaTypeAll;
     }
 }
 
