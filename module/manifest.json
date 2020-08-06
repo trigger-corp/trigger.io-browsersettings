@@ -1,8 +1,8 @@
 {
     "description": "Set some useful browser configuration options.",
-    "min_platform_version": "v2.8.5",
+    "min_platform_version": "v2.9.0",
     "namespace": "browsersettings",
-    "platform_version": "v2.8.5",
+    "platform_version": "v2.9.0",
     "version": "1.7",
     "changes": "* Fixed: iOS WKWebView no longer respects `allowsInlineMediaPlayback` on iOS 13"
 }
