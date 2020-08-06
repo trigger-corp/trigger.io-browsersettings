@@ -2,6 +2,7 @@
 
 module("browsersettings");
 
+
 asyncTest("Test html5 audio", 1, function() {
     var audioElement = document.createElement("audio");
     audioElement.src = forge.inspector.getFixture("browsersettings", "audio.mp3").uri;
@@ -45,6 +46,7 @@ if (forge.is.ios()) {
     });
 }
 
+
 asyncTest("Autoplay video", 1, function() {
     $("video" ).remove();
     var videoElement = document.createElement("video");
@@ -65,15 +67,19 @@ asyncTest("Autoplay video", 1, function() {
     });
 });
 
+
 asyncTest("Test accept cookies", 1, function() {
-    $("video" ).remove();
+    $("video").remove();
+
     var iframeElement = document.createElement("iframe");
     iframeElement.setAttribute("id", "iframe");
     document.getElementById("qunit").appendChild(iframeElement);
+
     $.ajax({
         url: "https://httpbin.org/cookies/set?mainpage_cookie=set_successfully",
-        success: function () {
-            forge.logging.log("Ajax - set cookie");
+        success: function (response) {
+            forge.logging.log("Ajax - set cookie: " + JSON.stringify(response));
+            $("#iframe").attr("sandbox", "allow-storage-access-by-user-activation allow-scripts allow-same-origin");
             $("#iframe").attr("src", "https://httpbin.org/cookies/set?iframe_cookie=set_successfully");
             askQuestion("Did the mainpage_cookie and the iframe_cookie set successfully?", {
                 Yes: function() {
